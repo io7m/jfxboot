@@ -7,7 +7,7 @@ JavaFX in 30 seconds!
 
 ### Main
 
-The [Main](src/main/java/com/io7m/jfxboot/app/Main.java) class is the main
+The [Main](com.io7m.jfxboot.app/src/main/java/com/io7m/jfxboot/app/Main.java) class is the main
 command-line entry point. The code calls `Platform.startup()` which tells
 JavaFX to initialize the platform and execute the given `Runnable` on the
 JavaFX main thread. JavaFX is (effectively) single-threaded in the same manner
@@ -20,11 +20,11 @@ with a _Scene_.
 
 ### MainApplication
 
-The [MainApplication](src/main/java/com/io7m/jfxboot/app/internal/MainApplication.java) class
+The [MainApplication](com.io7m.jfxboot.app/src/main/java/com/io7m/jfxboot/app/internal/MainApplication.java) class
 is responsible for instantiating a _scene_. A _scene_ is essentially a container
 for a set of UI components, and there's normally one scene per application
 window. It's possible to build a scene by hand, but more typical is to
-use an _FXML_ file to define a scene. The included [main.fxml](src/main/resources/com/io7m/jfxboot/app/internal/main.fxml)
+use an _FXML_ file to define a scene. The included [main.fxml](com.io7m.jfxboot.app/src/main/resources/com/io7m/jfxboot/app/internal/main.fxml)
 file was created using
 [SceneBuilder](https://gluonhq.com/products/scene-builder/), but we could
 of course write it by hand too if masochism was our thing.
@@ -34,7 +34,7 @@ the _controller_ class declared in the FXML file. A controller class implements
 the business logic for a UI, and holds references to UI elements that are
 automatically injected into the class instance using `@FXML` annotations.
 
-In this case, the controller class we created is [MainController](src/main/java/com/io7m/jfxboot/app/internal/MainController.java).
+In this case, the controller class we created is [MainController](com.io7m.jfxboot.app/src/main/java/com/io7m/jfxboot/app/internal/MainController.java).
 The `MainController` class in our case _must_ have a public no-arg constructor
 for JavaFX to be able to instantiate it. In real applications, we'd probably
 want to be able to pass values to the contructor and so we'd give `FXMLLoader`
